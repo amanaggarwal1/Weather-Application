@@ -15,6 +15,7 @@ import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -98,7 +99,7 @@ public class WeatherController extends AppCompatActivity {
                 params.put("lat", Latitude);
                 params.put("lon", Longitude);
                 params.put("appid", APP_ID);
-
+                letsDoSomeNetworking(params);
             }
 
             @Override
@@ -152,15 +153,17 @@ public class WeatherController extends AppCompatActivity {
 
             AsyncHttpClient client = new AsyncHttpClient();
 
-            client.get(WEATHER_URL, params, new  JsonHttpResponseHandler(){
-
-
+            client.get(WEATHER_URL, params, new JsonHttpResponseHandler(){
+                
                 public void OnSuccess(int statusCode, Header[] header, JSONObject response){
-
+                    Log.d("Weather", "OnSuccess called"+ response.toString());
                 }
 
                 public  void OnFailure(int statusCode, Header[] header,Throwable e, JSONObject response){
-                    Log.d("Weather", "Request Denied" + e.toString());
+                    Log.e("Weather", "Request Denied " + e.toString());
+                    Log.d("Weather", "Status code : " + statusCode);
+                    Toast.makeText(WeatherController.this, "Request Denied", Toast.LENGTH_SHORT).show();
+
                 }
             });
 
