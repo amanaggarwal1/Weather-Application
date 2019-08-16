@@ -1,4 +1,4 @@
-package com.londonappbrewery.climapm;
+package com.amanaggarwal1.weather;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

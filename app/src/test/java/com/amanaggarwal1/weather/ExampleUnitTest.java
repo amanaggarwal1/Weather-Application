@@ -1,4 +1,4 @@
-package com.londonappbrewery.climapm;
+package com.amanaggarwal1.weather;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.londonappbrewery.climapm;
+package com.amanaggarwal1.weather;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
