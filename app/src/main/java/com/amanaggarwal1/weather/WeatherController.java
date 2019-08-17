@@ -199,8 +199,8 @@ public class WeatherController extends AppCompatActivity {
         Log.d("Weather", "updateUI() called");
         mTemperatureLabel.setText(weatherData.getTemperature());
         mCityLabel.setText(weatherData.getCity());
-//        int resourceID = getResources().getIdentifier(weatherData.getIconName(), "drawable", getPackageName());
-//        mWeatherImage.setImageResource(resourceID);
+        int resourceID = getResources().getIdentifier(weatherData.getIconName(), "drawable", getPackageName());
+        mWeatherImage.setImageResource(resourceID);
 
     }
 

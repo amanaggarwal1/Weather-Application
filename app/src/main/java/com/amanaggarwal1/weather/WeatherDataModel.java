@@ -18,7 +18,7 @@ public class WeatherDataModel {
 
                 weatherDataModel.mCity = jsonObject.getString("name");
                 weatherDataModel.mCondition = jsonObject.getJSONArray("weather").getJSONObject(0).getInt("id");
-                updateWeatherIcon(weatherDataModel.mCondition);
+                weatherDataModel.mIconName = updateWeatherIcon(weatherDataModel.mCondition);
 
                 double tempResult = jsonObject.getJSONObject("main").getDouble("temp") - 273.15;
                 int RoundedValue = (int) Math.rint(tempResult);
