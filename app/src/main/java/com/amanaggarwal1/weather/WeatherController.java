@@ -46,7 +46,7 @@ public class WeatherController extends AppCompatActivity {
     TextView mCityLabel;
     ImageView mWeatherImage;
     TextView mTemperatureLabel;
-
+    ImageButton changeCityButton;
     LocationManager mLocationManager;
     LocationListener mLocationListener;
 
@@ -59,7 +59,7 @@ public class WeatherController extends AppCompatActivity {
         mCityLabel = findViewById(R.id.locationTV);
         mWeatherImage = findViewById(R.id.weatherSymbolIV);
         mTemperatureLabel = findViewById(R.id.tempTV);
-        ImageButton changeCityButton = findViewById(R.id.changeCityButton);
+        changeCityButton = findViewById(R.id.changeCityButton);
 
         changeCityButton.setOnClickListener(new View.OnClickListener() {
             @Override
